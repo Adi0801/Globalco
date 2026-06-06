@@ -1,0 +1,33 @@
+.job-list-shell {
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  max-height: calc(100vh - 340px);
+  min-height: 400px;
+  overflow-y: auto;
+  scrollbar-color: #cbd5e1 transparent;
+  scrollbar-width: thin;
+}
+
+.job-list-shell::-webkit-scrollbar {
+  width: 6px;
+}
+
+.job-list-shell::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.job-list-shell::-webkit-scrollbar-thumb {
+  background-color: #cbd5e1;
+  border-radius: 3px;
+}
+
+.job-list {
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.job-row-container {
+  box-sizing: border-box;
+}

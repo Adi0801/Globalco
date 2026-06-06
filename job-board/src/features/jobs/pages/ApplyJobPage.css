@@ -1,0 +1,20 @@
+.apply-page-layout {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+
+@media (min-width: 768px) {
+  .apply-page-layout {
+    grid-template-columns: 280px 1fr;
+  }
+
+  .apply-summary {
+    position: sticky;
+    top: 20px;
+  }
+}
+
+.apply-form-card {
+  max-width: 100%;
+}

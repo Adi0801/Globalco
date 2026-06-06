@@ -1,0 +1,16 @@
+.jobs-page-layout {
+  gap: 16px;
+  min-height: 700px;
+}
+
+@media (min-width: 1024px) {
+  .jobs-list-column {
+    max-height: 700px;
+    overflow-y: auto;
+  }
+
+  .jobs-details-column {
+    max-height: 700px;
+    overflow-y: auto;
+  }
+}

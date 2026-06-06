@@ -1,0 +1,95 @@
+.app-shell-header {
+  background-color: #ffffff !important;
+  border-bottom: 1px solid #f1f5f9;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.05), 0 1px 2px -1px rgba(0, 0, 0, 0.05);
+  height: 64px;
+  line-height: 64px;
+  padding: 0 24px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.header-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
+
+.brand-link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  background: linear-gradient(135deg, #14b8a6 0%, #0ea5e9 100%);
+  color: #ffffff;
+}
+
+.logo-icon {
+  stroke-width: 2.25;
+}
+
+.brand-text {
+  font-size: 18px;
+  color: #0f172a !important;
+  letter-spacing: -0.2px;
+}
+
+.brand-subtext {
+  color: #64748b;
+  font-weight: 400;
+}
+
+.header-menu {
+  border-bottom: none !important;
+  background: transparent !important;
+  min-width: 280px;
+  justify-content: flex-end;
+}
+
+.header-menu .ant-menu-item {
+  height: 64px !important;
+  line-height: 64px !important;
+  font-size: 15px;
+  font-weight: 500;
+  color: #475569 !important;
+  transition: all 0.2s ease;
+}
+
+.header-menu .ant-menu-item-selected {
+  color: #0f172a !important;
+}
+
+.header-menu .ant-menu-item:hover {
+  color: #0f172a !important;
+}
+
+.app-shell-content {
+  background-color: #f8fafc;
+}
+
+.content-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 24px 16px 48px 16px;
+}
+
+@media (max-width: 640px) {
+  .app-shell-header {
+    padding: 0 16px;
+  }
+  .brand-subtext {
+    display: none;
+  }
+}
