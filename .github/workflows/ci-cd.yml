@@ -18,12 +18,15 @@ jobs:
           cache-dependency-path: job-board/package-lock.json
 
       - name: Install dependencies
+        working-directory: job-board
         run: npm ci
 
       - name: Lint
+        working-directory: job-board
         run: npm run lint
 
       - name: Build
+        working-directory: job-board
         run: npm run build
 
   deploy:
@@ -40,6 +43,7 @@ jobs:
           cache-dependency-path: job-board/package-lock.json
 
       - name: Install dependencies
+        working-directory: job-board
         run: npm ci
 
       - name: Install Vercel CLI
