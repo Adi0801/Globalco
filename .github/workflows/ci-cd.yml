@@ -18,15 +18,12 @@ jobs:
           cache-dependency-path: job-board/package-lock.json
 
       - name: Install dependencies
-        working-directory: job-board
         run: npm ci
 
       - name: Lint
-        working-directory: job-board
         run: npm run lint
 
       - name: Build
-        working-directory: job-board
         run: npm run build
 
   deploy:
@@ -43,28 +40,24 @@ jobs:
           cache-dependency-path: job-board/package-lock.json
 
       - name: Install dependencies
-        working-directory: job-board
         run: npm ci
 
       - name: Install Vercel CLI
         run: npm install -g vercel
 
       - name: Pull Vercel environment
-        working-directory: job-board
         run: vercel pull --yes --environment=production --token=${{ secrets.VERCEL_TOKEN }}
         env:
           VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
           VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
 
       - name: Build Vercel output
-        working-directory: job-board
         run: vercel build --prod --token=${{ secrets.VERCEL_TOKEN }}
         env:
           VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
           VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
 
       - name: Deploy Vercel output
-        working-directory: job-board
         run: vercel deploy --prebuilt --prod --token=${{ secrets.VERCEL_TOKEN }}
         env:
           VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
